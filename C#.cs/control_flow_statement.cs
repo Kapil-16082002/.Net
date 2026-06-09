@@ -119,6 +119,20 @@ if(age >= 18)
 ✅E. switch Statement: Used instead of multiple if-else statements.
 A switch statement is a selection (decision-making) statement used to execute one block of code from multiple possible choices based on the value of an expression.
 
+📌 Rule of Thumb
+✅ Use if-else for ranges or complex conditions (age > 18 && salary > 50000).
+✅ Use switch for fixed predefined values (DayOfWeek, OrderStatus, UserRole, menu options, etc.).
+
+❌ When NOT to Use switch
+Avoid switch when conditions involve ranges or complex logic.
+Example:
+if(age >= 18 && age <= 60)
+{
+    Console.WriteLine("Eligible");
+}
+switch is not the best choice for such comparisons.
+
+
 Syntax:
 switch(expression)
 {
@@ -171,7 +185,40 @@ break
 Exit switch
 
 
+✅Calculator:
+using System;
+class Program
+{
+    static void Main()
+    {
+        int a = 10;
+        int b = 5;
+        char op = '+';
 
+        switch(op)
+        {
+            case '+':
+                Console.WriteLine(a + b);
+                break;
+
+            case '-':
+                Console.WriteLine(a - b);
+                break;
+
+            case '*':
+                Console.WriteLine(a * b);
+                break;
+
+            case '/':
+                Console.WriteLine(a / b);
+                break;
+
+            default:
+                Console.WriteLine("Invalid Operator");
+                break;
+        }
+    }
+}
 
 
 
