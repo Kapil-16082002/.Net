@@ -94,7 +94,6 @@ class Demo
         CreatedOn = DateTime.Now;
     }
 }
-
 ❌Invalid.
 const DateTime CreatedOn = DateTime.Now;
 Because const requires compile-time values.
