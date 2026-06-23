@@ -14,8 +14,7 @@ List<int> list = new List<int>(arr);
 
 
 
-
-✅🔥✅🔥Why List<T> instead of Array?
+✅🔥Why List<T> instead of Array?
 Array problems:
 int[] arr = new int[3];
 Fixed size ❌
