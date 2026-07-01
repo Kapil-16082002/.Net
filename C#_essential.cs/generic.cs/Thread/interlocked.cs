@@ -6,7 +6,6 @@ It ensures that reads and writes to a variable are atomic — i.e., they happen 
 
 
 ✅🔥 Why was Interlocked introduced : To overcome the Race Condition problem
-
 Full code:
 using System;
 using System.Threading;
