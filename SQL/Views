@@ -1,0 +1,90 @@
+✅🔥 What are SQL Server Views ?
+A View in SQL Server is a virtual table whose contents are defined by a SELECT statement.
+Unlike a normal table, a view does not store the actual data (except for Indexed Views). 
+It stores only the SQL query. Whenever you query a view, SQL Server executes the stored query and returns the latest data from the underlying table(s).
+
+Definition (Interview):
+A View is a named SQL query that behaves like a virtual table. 
+It is created using one or more tables and displays data without storing it physically.
+
+
+✅Example:
+Suppose we have the following Employee table.
+| EmployeeId | Name  | Department | Salary | Password |
+| ---------- | ----- | ---------- | ------ | -------- |
+| 1          | John  | IT         | 60000  | abc123   |
+| 2          | David | HR         | 50000  | xyz789   |
+
+We create a view that exposes only the required columns.
+CREATE VIEW EmployeeView
+AS
+SELECT EmployeeId,
+       Name,
+       Department
+FROM Employee;
+
+Now:
+SELECT *
+FROM EmployeeView;
+Output: Notice that Salary and Password are hidden.
+| EmployeeId | Name  | Department |
+| ---------- | ----- | ---------- |
+| 1          | John  | IT         |
+| 2          | David | HR         |
+
+
+---------------------------------------------------------------------------
+
+✅🔥 How Views Work Internally
+When you execute:
+CREATE VIEW EmployeeView
+AS
+SELECT EmployeeId,
+       Name,
+       Department
+FROM Employee;
+
+SQL Server does not copy the data into another table.Instead, it stores only the SQL statement.
+Internally, SQL Server stores:
+SELECT EmployeeId,
+       Name,
+       Department
+FROM Employee;
+
+
+✅Whenever you execute:
+SELECT *
+FROM EmployeeView;
+
+SQL Server internally runs:
+SELECT EmployeeId,
+       Name,
+       Department
+FROM Employee;
+Therefore, the view always shows the latest data from the table.
+
+--------------------------------------------------------------------------
+
+✅🔥 Why Do We Need Views?
+1. Security: Suppose the Employee table contains confidential information.
+| EmployeeId | Name  | Salary | Password |
+| ---------- | ----- | ------ | -------- |
+| 1          | John  | 60000  | abc123   |
+| 2          | David | 50000  | xyz789   |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
