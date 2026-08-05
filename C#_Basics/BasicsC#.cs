@@ -32,8 +32,7 @@ Machine Code
 
 
 
-✅🚀 What makes C# popular?
-
+✅🚀 What makes C# popular ?
 Here are three reasons C# is so widely adopted:
 ✅1. Easy to learn because it’s managed
 C# is a managed language, which means complex tasks such as memory management (critical to any application) and garbage collection are taken care of for you. 
