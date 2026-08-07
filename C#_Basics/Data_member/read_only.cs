@@ -1,4 +1,5 @@
-✅🔥🚀 What is readonly?
+
+✅🔥🚀 What is readonly ?
 A readonly field is a field whose value:
 Can be assigned only once
 Can be assigned:

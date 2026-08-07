@@ -1,12 +1,13 @@
 ✅🔥Nullable value types:
 A Nullable Value Type allows a value type to contain:
 A value
-OR 
+OR
 null
+
 Syntax:
-Nullable<int> x = null;     OR
-int? x = null;
-Both are identical.Internally int? x; is converted by compiler into Nullable<int> x;
+Nullable<int> x = null;   
+OR
+int? x = null;// Both are identical. Internally int? x; is converted by compiler into Nullable<int> x;
 
 
 
@@ -14,7 +15,6 @@ Both are identical.Internally int? x; is converted by compiler into Nullable<int
 Before C# 2.0, value types could never contain null.
 int age = null;// Compiler Error: Cannot convert null to 'int'
 -----------------------------------------------------------------------------------------------------------
-
 
 ✅🔥Memory Representation:
 Nullable is actually defined approximately as:
@@ -48,7 +48,6 @@ Stack
 | HasValue = false       |
 | Value = undefined      |
 +------------------------+
-
 -----------------------------------------------------------------------------------------------------------------
 
 ✅🔥 Nullable with Value:

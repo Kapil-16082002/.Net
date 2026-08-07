@@ -1,3 +1,4 @@
+
 ✅🔥 Constructor
 A constructor is a special member function that is automatically called when an object of a class is created.
 Its main purpose is to initialize the object's data (fields/properties).
@@ -59,7 +60,7 @@ Student s = new Student("Kapil", 22);// Object is initialized at the time of cre
 
 ==================================================================================================================
 ✅🔥1. Default Constructor
-A default constructor is a constructor that takes no parameters. 
+A default constructor is a constructor that takes no parameters.
 If no constructor is defined, C# provides a default constructor automatically.
 
 using System;

@@ -13,7 +13,8 @@ Speed
 Model
 Start()
 Stop()
-But the blueprint itself is not a real car. Only when the factory manufactures a car does it become a real object.
+But the blueprint itself is not a real car. 
+Only when the factory manufactures a car does it become a real object.
 
 
 class ClassName
@@ -95,7 +96,7 @@ sealed class Employee
 Once a class is marked as sealed, no other class can derive from it.
 
 
-✅Why Do We Need a Sealed Class?
+✅Why Do We Need a Sealed Class ?
 Suppose you create a class that contains important business logic or security-related functionality, and you do not want anyone to modify its behavior through inheritance.
 In such cases, mark the class as sealed.
 It tells the compiler: "This class is final. No class can inherit from it."

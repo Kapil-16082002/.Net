@@ -1,8 +1,9 @@
-✅🔥What is a Tuple(ValueTuple)?
+
+✅🔥What is a Tuple(ValueTuple) ?
 A Tuple is a collection that groups multiple data types into one object-like value.
 // Tuple vs System.Tuple ???????
 Basic Syntax:
-(type1, type2) variable = (value1, value2);
+(type1, type2) variable_Name = (value1, value2);
 Example:
 (string, int, double) student = ("Kapil", 23, 92.5);
 Console.WriteLine(student.Item1); // Kapil

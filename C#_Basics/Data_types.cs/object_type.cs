@@ -1,6 +1,4 @@
-✅🔥🚀 using System.Runtime.InteropServices.Marshalling;
-
-What is object type in C# ?
+✅🔥🚀What is object type in C# ?
 The object type is the base type of every data type in C#.
 i.e Every type in C# (value type or reference type) ultimately derives from System.Object.
 
@@ -9,7 +7,7 @@ object obj;
 System.Object obj;
 
 
-✅🔥Why can object store everything?
+✅🔥Why can object store everything ?
 Because: Every Type inherits from System.Object, So every type can be treated as an object.
 That means:
 int derives from object
@@ -19,7 +17,7 @@ class derives from object
 struct derives from object
 
 
-✅🔥Why was object introduced?
+✅🔥Why was object introduced ?
 Suppose a method should accept any kind of data.
 Without object: Need multiple methods.
 void PrintInt(int x){}
@@ -60,7 +58,7 @@ object obj = "Hello"; // string
 object obj = new int[] {1,2,3}; // Arrays
 
 class Employee{}
-Employee emp = new Employee();  // class 
+Employee emp = new Employee();  // class
 object obj = emp;
 
 -----------------------------------------------------------------------------------------------------------------
@@ -88,7 +86,7 @@ Type=System.Boolean Value=True
 
 ====================================================================================================================
 
-✅🔥 Why Object Arrays Are Slow in C#
+✅🔥 Why Object Arrays Are Slow in C#:
 /*Because value types stored in object[] are boxed, creating heap allocations. 
 Reading them requires unboxing, and the scattered heap objects reduce CPU cache efficiency while increasing garbage collection overhead.
 */
@@ -99,7 +97,6 @@ There are three major reasons:
 
 ✅🔥Reason 1: Boxing
 Boxing is the process of converting a value type into an object (reference type) by copying the value into a new object on the managed heap.
-
 Example:
 int x = 10;
 object obj = x;    // Boxing
@@ -110,7 +107,8 @@ numbers[1] = 20;
 numbers[2] = 30;
 The array stores only references, not integers.
 Here, 10 is an int (value type) but array expects object (reference type). So CLR performs Boxing.
-Instead of storing 10 directly into stack, CLR creates a heap object containing 10.Every integer stored becomes a separate object.
+Instead of storing 10 directly into stack, CLR creates a heap object containing 10.
+Every integer stored becomes a separate object.
 This is called Boxing.
 
 Internal Memory: 3 integers create 3 heap objects.

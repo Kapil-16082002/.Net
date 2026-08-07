@@ -1,6 +1,6 @@
 
 ✅🔥🚀 Structure (struct) in C#
-A Structure (struct) is a user-defined value type that groups related variables together into a single unit.
+A Structure (struct) is a user-defined value type data_type that groups related variables together into a single unit.
 Think of a struct as a lightweight class that is stored by value instead of by reference.
 Unlike classes:
 ✅ Value Type
@@ -51,7 +51,6 @@ Use struct when:
 ===============================================================================================================
 
 ✅🔥 Value Copy Behavior:
-
 struct Point
 {
     public int X;

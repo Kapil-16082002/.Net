@@ -1,10 +1,10 @@
-✅🔥📌 What is a Static Variable?
+✅🔥📌 What is a Static Variable ?
 A static variable is a class variable that is shared among all objects of the class.
 It belongs to the class, not individual objects.
 It gets memory allocation only once and retains(persists) its value across all objects.
 
 
-🔥 Why do we use static?
+🔥 Why do we use static ?
 Suppose every employee has a different name but all employees belong to the same company.
 Should every object store "EPAM"? ❌ No.
 Only one copy is enough. That's why we use static.
@@ -75,7 +75,6 @@ class Program
         Console.WriteLine(Employee.Company);
     }
 }
-
 ==================================================================================================================
 
 ✅🔥📌 Types of Static Members
@@ -99,8 +98,7 @@ Console.WriteLine(Calculator.Add(10, 20)); // No object creation
 Output: 30
 
 
-✅🔥📌When Should You Use Static Methods?
-
+✅🔥📌When Should You Use Static Methods ?
 Use static methods when:
 1. No Object Data Needed
 Math.Sqrt()

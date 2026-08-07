@@ -23,7 +23,6 @@ which is much easier to understand.
 
 
 Why Use Enum?
-
 ✅ Improves readability
             OrderStatus status = OrderStatus.Pending;
             instead of int status = 0;
@@ -34,7 +33,6 @@ Why Use Enum?
 
 ❌ Problem Without Enum
 Suppose you are developing an order management system.
-
 using System;
 class Program
 {
@@ -49,7 +47,6 @@ class Program
 }
 ⚠️ Problem
 Looking at: int status = 1;
-
 Nobody knows:
 0 = Pending
 1 = Processing
@@ -60,7 +57,6 @@ The code is difficult to understand.
 
 ✅ Solution Using Enum
 using System;
-
 enum OrderStatus
 {
     Pending,
@@ -85,7 +81,6 @@ Order is Processing
 ===============================================================================================================
 
 ✅🔥🚀 Default Values of Enum:
-
 using System;
 enum Color
 {
@@ -339,7 +334,7 @@ class Program
         }
     }
 }
-Output
+Output:
 Pending
 Processing
 Completed

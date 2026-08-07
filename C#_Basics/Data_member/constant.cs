@@ -1,4 +1,5 @@
-✅🔥🚀 const Keyword in C#
+
+✅🔥🚀 const Keyword in C#:
 A constant (const) is a variable whose value cannot be changed after it is declared.
 Once assigned, its value remains fixed for the entire lifetime of the program.
 
@@ -8,16 +9,16 @@ const double PI = 3.14159;
 Console.WriteLine(PI);
 
 
-✅📌 Why do we use const?
+✅📌 Why do we use const ?
 Suppose your application uses the value of π in many places.
 
-Without const
+Without const:
 double area = 3.14159 * r * r;
 double circumference = 2 * 3.14159 * r;
 If π changes everywhere (or you typed it incorrectly), maintenance becomes difficult.
 
 
-📌 Compile-Time Optimization
+📌 Compile-Time Optimization:
 Example: const int x = 5;
 Console.WriteLine(x + 10);
 
@@ -44,9 +45,9 @@ int x = 10;
 const int y = x;
 Compiler Error. Because x is determined at runtime.
 
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 
-✅📌 Can we modify a constant?
+✅📌 Can we modify a constant ?
 No.
 const int MaxAge = 100;
 MaxAge = 200;
@@ -83,7 +84,7 @@ Access: no need to create object, Console.WriteLine(Demo.Age);
 
 -------------------------------------------------------------------------------
 
-✅📌 Why Should We Use const?
+✅📌 Why Should We Use const ?
 1. Prevents accidental modification
 const int Days = 7;
 Nobody can change it.

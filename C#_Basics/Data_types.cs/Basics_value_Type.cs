@@ -97,7 +97,7 @@ The actual value is stored.
 ================================================================================================================
 
 🚀 decimal Data Type in C#
-decimal is a high-precision numeric data type used when accuracy is more important than speed.
+decimal is a high-precision numeric data type  and used when accuracy is more important than speed.
 decimal salary = 12345.67m;
 ⚠️ Notice the m at the end. It tells the compiler that the value is a decimal.
 
