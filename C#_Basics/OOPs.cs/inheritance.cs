@@ -277,7 +277,6 @@ Ambiguous. C# avoids this problem by allowing only one base class.
 ----------------------------------------------------------------
 
 ✅🔥Solution:
-
 But C# DOES Support Multiple Interfaces. This is the important solution.
 C# allows:
 class MyClass : Interface1, Interface2
@@ -315,16 +314,54 @@ class Program
 ✅🔥 But What If B and C Need Different Implementations ?
 
 This is where explicit interface implementation becomes very useful.
-
 Suppose:
-
 IB → Display()
 IC → Display()
-
 and we want different implementations.
 
+We can write:
+using System;
+class A
+{
+    public void Display()
+    {
+        Console.WriteLine("A.Display()");
+    }
+}
+interface IB
+{
+    void Display();
+}
+interface IC
+{
+    void Display();
+}
+class D : A, IB, IC
+{
+    void IB.Display()  // means, "This implementation belongs specifically to IB."
+    {
+        Console.WriteLine("B implementation");
+    }
+    void IC.Display()  // // means, "This implementation belongs specifically to IC."
+    {
+        Console.WriteLine("C implementation");
+    }
+}
+class Program
+{
+    static void Main()
+    {
+        obj.Display();   // Access A's implementation
 
+        IB b = obj;
+        b.Display();    // Access IB's implementation
 
+        IC c = obj;
+        c.Display();    // Access IC's implementation
+    }
+}
+Output:
+This is the proper C# way to resolve the ambiguity.
 
 
 
