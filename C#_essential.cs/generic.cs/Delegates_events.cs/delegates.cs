@@ -46,7 +46,7 @@ That's where delegates help.
 
 -------------------------------------------------
 
-✅🔥Delegate Syntax
+✅🔥Delegate Syntax:
 delegate returnType DelegateName(parameterList);
 Example: 
 delegate void MyDelegate();

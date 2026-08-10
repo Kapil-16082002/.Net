@@ -76,7 +76,7 @@ It is an instance of the Exception class (or one of its derived clThese properti
 asses).
 
 | Property           | Description                                                                       |
-| **Source**         | Name of the application or object that caused the exception.                      |
+| **Source**         | Name of the application or object that caused the exception.                     |
 | **Message**        | Describes what error occurred.                                                    |
 | **TargetSite**     | The method where the exception was thrown.                                        |
 | **StackTrace**     | Shows the sequence of method calls that led to the exception.                     |

@@ -10,7 +10,7 @@ throw vs throw ex
 Because of this, throw; is almost always preferred.
 
 /* 
-✅🔥Why is throw ex dangerous?
+✅🔥Why is throw ex dangerous ?
 Because it destroys the original stack trace, making it difficult to identify where the exception actually occurred.
 
 ✅🔥Can throw be used outside a catch block?

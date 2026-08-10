@@ -3,7 +3,7 @@ Predefined Attributes are built-in attributes provided by the .NET Framework and
 They are designed to provide common metadata that the compiler, CLR (Common Language Runtime), or .NET Framework can understand and use.
 
 
-✅🔥 Why Do We Need Predefined Attributes?
+✅🔥 Why Do We Need Predefined Attributes ?
 Imagine if .NET did not provide built-in attributes.
 If we wanted to:
   Mark a class as serializable
