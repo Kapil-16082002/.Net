@@ -4,7 +4,7 @@ that helps in software or application designing.
 OOP focuses on the objects that developers want to manipulate rather than the logic required to manipulate them.
 
 
-✅#Why OOps
+✅#Why OOps:
 #1.Reusability-> Through inheritance, OOPs allow programmers to reuse code agin and again and extend the use of existing classes.
 #2.Enhanced Security -> With encapsulation, critical or inernal data is hidden from outside interference, allowing only specific parts of the program 
 to interact with the internal states of an object, improving security and reducing unintended side effects.
