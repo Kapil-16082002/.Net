@@ -40,7 +40,7 @@ Namespace:
 using System.Collections;
 
 
-✅ Why are they called “Non-Generic”?
+✅ Why are they called “Non-Generic” ?
 Because they use: object
 So everything is stored as an object → boxing/unboxing is required.
 Key Problem:
@@ -87,22 +87,6 @@ Because:
 Boxing/unboxing
 Type casting
 No compile-time checks
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ===================================================================================================================
 

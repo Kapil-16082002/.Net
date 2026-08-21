@@ -294,6 +294,70 @@ An abstract method has no implementation in the base class, so a concrete derive
 ================================================================================================================
 
 ✅🔥 static cannot be overridden
+Overriding is based on runtime polymorphism, but static members belong to the type/class, not to an object.
+class Animal
+{
+    public static void Speak() // // ❌, Speak() belongs to the class, not to an object.
+    {
+        Console.WriteLine("Animal speaks");
+    }
+}
+class Dog : Animal
+{
+    public override void Speak()
+    {
+        Console.WriteLine("Dog barks");
+    }
+}
+Animal a = new Dog();
+a.Speak();
+You call it using: Animal.Speak(); But There is no object involved.
+
+Conceptually:
+Animal
+  ↓
+Speak()
+
+not:
+Animal object
+  ↓
+Speak()
+Therefore, there is no object on which runtime polymorphism can operate.
+
+
+✅🔥 Very important interview example
+Look at this:
+class Animal
+{
+    public static void Speak()
+    {
+        Console.WriteLine("Animal");
+    }
+}
+class Dog : Animal
+{
+    public static void Speak()
+    {
+        Console.WriteLine("Dog");
+    }
+}
+class Program
+{
+    static void Main()
+    {
+        Animal animal = new Dog();
+        a.Speak();
+    }
+}
+Output: Animal
+Many beginners expect: Dog
+
+The compiler sees: animal as an Animal reference, and Speak() is static.
+Therefore: Animal.Speak() is selected.
+The actual object: new Dog() doesn't participate in static method dispatch.
+
+
+----------------------------------------------------------------------------
 ✅🔥 Return Type Must Be Compatible in Method Overriding:
 There are two important cases:
    Same return type — always valid.

@@ -9,6 +9,10 @@ T = Type (int, string, Student, etc.)
 
 List<int> list = new List<int>();
 List<int> list = new List<int>(10); // default value 0
+List<int> list = new List<int>{10,20,30,40};
+var numbers = new List<int>();   // The compiler understands: numbers → List<int>
+var numbers = new List<int>{10,20,30,40};
+
 int[] arr = { 1, 2, 3 };
 List<int> list = new List<int>(arr);
 
@@ -102,7 +106,6 @@ class Program
 
 ✅ 3. Insert() — Insert at specific index
 Use case: Insert value at a position.
-
 class Program
 {
     static void Main()
