@@ -1,3 +1,4 @@
+
 ✅🔥 What is a Race Condition ?
 A race condition occurs in multithreaded programming when two or more threads access shared data simultaneously, 
  and the outcome of the program depends on the order in which the threads execute.
@@ -82,7 +83,6 @@ Without synchronization, race conditions, data corruption, or unexpected behavio
       Semaphore
       ReaderWriterLockSlim
 
-keep
 ===============================================================================================================
 
 ✅🔥 1. lock Keyword
@@ -102,6 +102,7 @@ Because lock needs a shared reference object to synchronize threads.
 ❌ Different objects = no synchronization
 
 -------------------------------------------------------------
+
 ⚠️ Important Rules of lock:
 1. Lock must use reference type
 lock (new object()) ❌ WRONG

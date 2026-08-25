@@ -118,7 +118,7 @@ This is the key difference.
 
 -------------------------------------------------------
 
-✅🔥 Normal Object vs Finalizable Object
+✅🔥 Normal Object vs Finalizable Object:
 Object without finalizer
 class Animal
 {
@@ -149,7 +149,101 @@ Later GC can reclaim memory
 
 ------------------------------------
 
-Finalization Queu
+✅🔥 Finalization Queue:
+When an object has a finalizer, the runtime keeps track of it so that its finalizer can eventually be executed.
+The important interview point is:
+
+Finalizers are executed by the runtime's finalization mechanism, not directly by the thread that made the object unreachable.
+
+Object with finalizer
+        │
+        ▼
+Finalization tracking
+        │
+        ▼
+Object becomes unreachable
+        │
+        ▼
+GC identifies it
+        │
+        ▼
+Finalization mechanism
+        │
+        ▼
+Finalizer executes
+
+==============================================================================================================
+
+✅🔥 IDisposable and Dispose()
+For deterministic cleanup of resources, .NET provides: IDisposable
+Deterministic cleanup means:
+You explicitly control when a resource is released, rather than waiting for the Garbage Collector to decide when cleanup should happen.
+
+class MyResource : IDisposable
+{
+    public void Dispose()
+    {
+        Console.WriteLine("Resource cleaned up");
+    }
+}
+MyResource resource = new MyResource();
+resource.Dispose();
+Output: Resource cleaned up
+
+
+
+✅🔥 Why Dispose() ?
+This is a very important distinction:
+GC Handles:  Managed memory
+Dispose Handles: Resources that need deterministic release
+For example:
+   File handles
+   Database connections
+   Sockets
+   Native handles
+
+-------------------------------------------------
+
+✅🔥 If a class contains both IDisposable and a finalizer, both can execute — but normally only one should perform the actual cleanup.
+Your code is:
+class MyResource : IDisposable
+{
+    ~MyResource()
+    {
+        // Finalizer
+    }
+    public void Dispose()
+    {
+        // Dispose cleanup
+        GC.SuppressFinalize(this);
+    }
+}
+The answer depends on how the object is cleaned up.
+
+✅ 1. If you call Dispose() explicitly
+MyResource resource = new MyResource();
+resource.Dispose();
+
+The flow is:
+resource.Dispose()
+       ↓
+Dispose() executes
+       ↓
+GC.SuppressFinalize(this)
+       ↓
+Finalizer is suppressed
+       ↓
+Finalizer does NOT execute
+
+So:
+Dispose()       → ✅ Executes
+Finalizer       → ❌ Does not execute
+
+Why? Because: GC.SuppressFinalize(this);
+tells the GC: "This object's cleanup has already been performed. Don't run its finalizer."
+
+
+
 
 
 

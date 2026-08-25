@@ -71,8 +71,8 @@ If errors exist: Compilation Failed
 ✅🔥Step 3: Generate IL (Intermediate Language)
 The compiler converts C# into IL.
 IL is:
-CPU independent
-Platform independent
+   CPU independent
+   Platform independent
 -----------------------------------------------------
 
 ✅🔥Step 4: Metadata Generation
@@ -89,10 +89,16 @@ Metadata stores:
 --------------------------------------------------------
 
 ✅🔥 Step 5: Assembly Creation
+An assembly is a compiled unit of deployment/versioning in .NET that contains IL, metadata, and assembly manifest information.
 The compiler packages IL + Metadata + Manifest into an assembly.
-Program.exe
-or
-Program.dll
+
+
+The compiler doesn't normally just produce an isolated .il file.
+It produces a .NET assembly.
+Depending on the project type, you commonly get:
+    Program.dll
+    or an executable:
+    Program.exe
 
 Assembly contains:
 ├── IL Code
@@ -100,7 +106,7 @@ Assembly contains:
 ├── Manifest
 └── Resources
 
-----------------------------------------------------------
+-------------------------------------------------------
 
 ✅🔥 Step 6: CLR Starts
 When you run the program:
@@ -116,15 +122,16 @@ CLR is responsible for:
    Garbage Collection
    JIT Compilation
    Thread management
----------------------------------------------------------
-✅🔥 Step 7: Class Loader
 
+------------------------------------------------------
+
+✅🔥 Step 7: Class Loader
 CLR loads:
    Required assemblies
    Required classes
    Referenced libraries
 
----------------------------------------------------------
+-------------------------------------------------------
 
 ✅🔥 Step 8: Verification
 CLR verifies:
