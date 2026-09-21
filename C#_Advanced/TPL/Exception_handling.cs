@@ -1,4 +1,5 @@
-✅🔥 Why Exception Handling is Different in TPL?
+
+✅🔥 Why Exception Handling is Different in TPL ?
 Synchronous Code:
 Consider a normal method:
 using System;

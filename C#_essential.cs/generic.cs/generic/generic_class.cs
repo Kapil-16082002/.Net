@@ -27,8 +27,6 @@ int x = (int)list[1];// Runtime Error: InvalidCastException
 The compiler cannot detect the mistake.
 
 
-
-
 2✅. Boxing and Unboxing
 ArrayList list = new ArrayList();
 list.Add(10);
