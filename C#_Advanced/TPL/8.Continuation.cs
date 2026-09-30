@@ -18,13 +18,17 @@ Each step depends on the previous one. This is exactly how Task Continuations wo
 
 ----------------------------------------------------------------
 
-✅ Why do we need Task Continuations?
+✅ Why do we need Task Continuations 
+
+What is the actual benefit of Task Continuations : 
+   Task Continuations are useful when one operation depends on the completion of another operation.
+
 ✅Without continuations:
 Task task = Task.Run(() =>
 {
     Console.WriteLine("Downloading file...");
 });
-task.Wait();
+task.Wait(); // Block current thread
 Console.WriteLine("Processing file...");
 Problems:
     Blocks the current thread.
@@ -112,7 +116,6 @@ class Program
         {
             Console.WriteLine($"Result = {t.Result}");
         });
-
         continuation.Wait();
     }
 }
@@ -206,7 +209,7 @@ Console.ReadLine();
 
 ✅🔥 ContinueWhenAll()
 ContinueWhenAll() creates a continuation task that executes only after all specified tasks have completed 
-, (whether they completed successfully, faulted, or were canceled).
+, (whether they completed successfully, faulted, or were cancelled).
 
 Syntax:
 Task.Factory.ContinueWhenAll(
@@ -215,7 +218,7 @@ Task.Factory.ContinueWhenAll(
 );
 
 
-✅ Why do we need it?
+✅ Why do we need it ?
 Suppose you download:
     Image
     Audio

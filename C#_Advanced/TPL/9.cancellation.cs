@@ -1,10 +1,9 @@
-✅🔥 using System.Security.Permissions;
 
 Why Cancellation:
 Cancellation is a mechanism that allows a running or pending task to stop its execution gracefully when cancellation is requested.
 Instead of forcefully killing a thread, .NET sends a cancellation request, and the task checks for it periodically.
 
-Why do we need Cancellation?
+Why do we need Cancellation ?
 Suppose you're downloading a 5 GB file.
 Download Started -> 20% -> 40% -> User clicks Cancel Then:
 ✅Without cancellation:
@@ -13,10 +12,9 @@ Task -> continues downloading -> Consumes CPU -> Consumes Network -> Consumes Me
 ✅With Cancellation
 Download Started -> User clicks Cancel -> Cancellation Requested -> Task Notices Request -> Stops Gracefully -> Resources Released
 
-
 ------------------------------------------------------------------------------------------------------------------
 
-✅🔥 Why not simply kill the thread?
+✅🔥 Why not simply kill the thread ?
 Suppose a thread is writing data into a database.
 Write Record -> Write Address -> Write Salary -> Thread Killed -> Database becomes inconsistent.
 Example:
@@ -47,8 +45,7 @@ class Program
                 }
                 Console.WriteLine(i);
                 Thread.Sleep(500);
-            }
-
+            
         }, cts.Token);
 
         Thread.Sleep(3000);
@@ -75,7 +72,7 @@ CancellationTokenSource -> Creates Token -> Later -> Cancel() -> Token Receives 
 ✅1. Token: Returns the associated CancellationToken.
 CancellationToken token = cts.Token;
 
-✅2. Cancel(): Requests cancellation immediately.]
+✅2. Cancel(): Requests cancellation immediately.
 cts.Cancel();
 
 ✅3. CancelAfter(): Requests cancellation automatically after a specified time.

@@ -1,7 +1,7 @@
-✅🔥 What is Task Scheduling?
+✅🔥 What is Task Scheduling ?
 Task Scheduling is the process of deciding:
-   Which thread will execute a task
    When the task should execute
+   Which thread will execute a task
    In what order tasks should execute
    On which scheduler the task should run
 
@@ -24,7 +24,8 @@ Assigns work to employees
 The scheduler acts exactly like a manager.
 
 -------------------------------------------------------
-✅🔥 Why do we need Task Scheduling?
+
+✅🔥 Why do we need Task Scheduling ?
 
 Imagine creating 500 Tasks.
 for(int i=0;i<500;i++)
@@ -110,9 +111,7 @@ System.Threading.Tasks.ThreadPoolTaskScheduler
 
 ✅🔥Default TaskScheduler:
 The Default TaskScheduler is the scheduler provided by .NET that executes Tasks using the Thread Pool.
-
 Whenever you write: Task.Run(...) or Task.Factory.StartNew(...) ,without specifying a scheduler,the Default Scheduler is used.
-
 Example:
 Task task = Task.Run(() =>
 {

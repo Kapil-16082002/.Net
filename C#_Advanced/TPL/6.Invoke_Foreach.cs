@@ -1,4 +1,4 @@
-✅🔥 What is Parallel Programming?
+✅🔥 What is Parallel Programming ?
 Parallel Programming is a programming technique in which multiple independent operations execute simultaneously on multiple CPU cores to complete work faster.
 Instead of doing one task after another, several tasks are executed at the same time.
 
@@ -13,6 +13,7 @@ Job3
 Job4
 One finishes, then next starts. Task will execute sequentially.
 
+
 ✅ With Parallel Programming
 Core 1 → Job1
 Core 2 → Job2
@@ -22,7 +23,7 @@ All execute simultaneously.
 
 -------------------------------------------------
 
-✅🔥 Why Parallel Programming?
+✅🔥 Why Parallel Programming ?
 Modern CPUs don't have just one processor.
 Example:
    Intel i5
@@ -101,7 +102,7 @@ Finished
 
 ----------------------------------------------
 
-✅🔥Parallel.Invoke is BLOCKING" mean?
+✅🔥Parallel.Invoke is BLOCKING" mean ?
 The thread that calls Parallel.Invoke() stops and waits until all the supplied methods have finished executing.
 Only after every method completes does the program continue with the next statement.
 

@@ -84,14 +84,14 @@ Task task = new Task(() =>
 }, "My Custom State");
 Console.WriteLine(task.AsyncState); // Access state
 Output: My Custom State
-=========================================================
 
-✅🔥 Creating Tasks
+=============================================================================
+
+✅🔥 All ways of Creating Tasks
 1. Task Constructor
-2. Task.Start()
-3. Task.Run()
-4. Task.Factory.StartNew()
-5. Parallel.Invoke()
+2. Task.Run()
+3. Task.Factory.StartNew()
+4. Parallel.Invoke()
 
 
 
@@ -108,7 +108,6 @@ task.Start(); // mandatory
 
 ✅2. Task.Start()
 Used with Task constructor.
-
 Task task = new Task(() =>
 {
     Console.WriteLine("Started manually");
@@ -121,7 +120,7 @@ Easy to forget .Start() → task never runs ❌
 ----------------------------------------------------
 
 ✅3. Task.Run() (MOST IMPORTANT)
-ask.Run is the modern recommended way to create and executes task immediately on ThreadPool.
+Task.Run is the modern recommended way to create and executes task immediately on ThreadPool.
 Task task = Task.Run(() =>
 {
     Console.WriteLine("Task.Run executed");
@@ -160,7 +159,7 @@ Task<TResult>:
 A Task<TResult> is a Task that returns a value of type TResult after completion.
 It represents an asynchronous operation that produces a result.
 
-/*Difference between Task and Task<TResult>?
+/*Difference between Task and Task<TResult> ?
 👉 Task → no return value
 👉 Task<TResult> → returns result */
 Syntax:

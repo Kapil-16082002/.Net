@@ -1,9 +1,5 @@
-✅🔥Asynchronous Programming?
-Asynchronous Programming is a programming model in which a method starts an operation and does not block the calling thread while waiting for the operation to complete.
-Instead of waiting, the calling thread is free to perform other work. When the operation finishes, execution resumes.
 
-
-✅🔥 In asynchronous programming, tasks can be executed concurrently or in parallel, depending on the system, without waiting for each task to finish before starting the next one. 
+✅🔥 In asynchronous programming, tasks can be executed concurrently or in parallel, without waiting for each task to finish before starting the next one. 
 When a task is initiated (e.g., downloading a file), it runs in the background, and the program can proceed without being blocked.
 
 
@@ -39,8 +35,6 @@ public async Task<int> CalculateAsync()
 {
     return 100;
 }
-
-
 ✅🔥 Example:
 using System;
 using System.Threading.Tasks;

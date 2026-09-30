@@ -86,7 +86,7 @@ InvalidOperationException
 
 
 
-Why do we need InnerExceptions?
+✅Why do we need InnerExceptions?
 Imagine three tasks running simultaneously.
 Task1
 ↓ throw

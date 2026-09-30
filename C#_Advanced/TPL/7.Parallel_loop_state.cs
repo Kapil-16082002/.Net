@@ -14,10 +14,9 @@ Parallel.For(
     int to,
     Action<int, ParallelLoopState> body
 );
+--------------------------------------------------------------------------
 
--------------------------------------------------------
-
-✅🔥 Why Do We Need ParallelLoopState?
+✅🔥 Why Do We Need ParallelLoopState ?
 "I've found what I need. Don't execute any more unnecessary iterations."
 
 Suppose you have an array of 100 employee IDs, and you want to find Employee ID = 1050.
@@ -45,7 +44,7 @@ Iteration 22
 Iteration 99
 
 No, because you've already found what you were looking for.
-Continuing to execute the remaining iterations would: 
+Continuing to execute the remaining iterations would:
    Waste CPU time
    Consume unnecessary system resources
    Reduce performance
@@ -113,7 +112,7 @@ Sometimes you may also see: Processing 6. if iteration 6 had already started bef
 
 
 
-✅🔥LowestBreakIteration?
+✅🔥LowestBreakIteration ?
 LowestBreakIteration is a property of ParallelLoopResult that returns the smallest iteration index that called state.Break().
 Suppose multiple iterations call Break().
 Example:
@@ -178,7 +177,7 @@ Parallel.For(0, 20, (i, state) =>
 });
 
 
-✅🔥Why Do We Need IsStopped?
+✅🔥Why Do We Need IsStopped ?
 We know that calling: 
 state.Stop(); does not immediately stop all currently running iterations.Some iterations may already be executing on other threads.
 Although Stop() prevents new iterations from starting, iterations 8, 10, and 12 are already running.
@@ -188,6 +187,7 @@ If it returns true, they can exit immediately instead of doing unnecessary work.
 
 
 ===========================================================================================================
+
 ✅🔥 MaxDegreeOfParallelism:
 MaxDegreeOfParallelism specifies the maximum number of concurrent operations that a parallel loop (Parallel.For, Parallel.ForEach) or a Parallel.Invoke can execute at the same time.
 It is a property of the ParallelOptions class.
@@ -209,7 +209,7 @@ Parallel.For(0, 100, options, i =>
 0 -->>  Not Allowed, ArgumentOutOfRangeException
 
 
-✅Why do we need MaxDegreeOfParallelism?
+✅Why do we need MaxDegreeOfParallelism ?
 Suppose your computer has 8 CPU cores.
 Now imagine this code:
 Parallel.For(1, 1000, i =>
@@ -217,10 +217,10 @@ Parallel.For(1, 1000, i =>
     Console.WriteLine(i);
 });
 You never specified
-2 threads
-4 threads
-8 threads
-16 threads
+    2 threads
+    4 threads
+    8 threads
+    16 threads
 So who decides? Answer: TPL Scheduler.
 It usually chooses a number based on
    CPU cores
