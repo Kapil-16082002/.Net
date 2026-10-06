@@ -2,7 +2,7 @@
 SQL Server is a Relational Database Management System (RDBMS) developed by Microsoft that is used to store, manage, retrieve, and manipulate structured data using SQL (Structured Query Language).
 
 In simple words:
-SQL Server is software that stores data in tables and allows applications to perform operations like 
+SQL Server is software that stores data in tables and allows applications to perform operations like
 , inserting, updating, deleting, and retrieving data efficiently.
 
 Example:
@@ -114,14 +114,13 @@ Authorization: What permissions does a user have?
 -------------------------------------------------------
 
 
-
 ✅ Database Management System (DBMS):
-This software allows users to create and manage databases. 
-It provides an interface for interacting with the database. 
+This software allows users to create and manage databases.
+It provides an interface for interacting with the database.
 
 
 ✅ Table:
- A table is a collection of data organized in terms of rows and columns. Each table is provided with a name. 
+A table is a collection of data organized in terms of rows and columns. Each table is provided with a name. 
 
 ✅ Column: 
 A column (or field) is a set of data values of a particular type. 
